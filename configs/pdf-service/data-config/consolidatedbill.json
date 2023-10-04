@@ -774,6 +774,66 @@
                     }
                   }
                 ]
+              },
+              {
+                "path": "http://property-services:8080/property-services/property/_plainsearch",
+                "queryParam": "tenantId=$.tenantId,propertyIds=$.consumerCode",
+                "apiRequest": null,
+                "responseMapping": [
+                  {
+                    "variable": "oldPropertyId",
+                    "value": "$.Properties[0].oldPropertyId"
+                  },
+                  {
+                    "variable": "houseNo",
+                    "value": "$.Properties[0].address.doorNo"
+                  },
+                  {
+                    "variable": "buildingName",
+                    "value": "$.Properties[0].address.buildingName"
+                  },
+                  {
+                    "variable": "street",
+                    "value": "$.Properties[0].address.street"
+                  },
+                  {
+                    "variable": "locality",
+                    "value": "$.Properties[0].address.locality.name"
+                  },
+                  {
+                    "variable": "fatherHusbandName",
+                    "value": "$.Properties[0].owners[0].fatherOrHusbandName"
+                  },
+                  {
+                    "variable": "var_owners",
+                    "value": "$.Properties[0].owners[?(@.active== true && @.status== 'ACTIVE')]",
+                    "type": "array",
+                    "format": {
+                      "type": "string",
+                      "scema": [
+                        {
+                          "variable": "name2",
+                          "value": "name"
+                        },
+                        {
+                          "variable": "fatherOrHusbandName2",
+                          "value": "fatherOrHusbandName"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              },
+              {
+                "path": "http://property-services:8080/property-services/assessment/_search",
+                "queryParam": "tenantId=$.tenantId,propertyIds=$.consumerCode",
+                "apiRequest": null,
+                "responseMapping": [
+                  {
+                    "variable": "assessmentNumber",
+                    "value": "$.Assessments[0].assessmentNumber"
+                  }
+                ]
               }
             ]
           }
