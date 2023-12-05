@@ -226,11 +226,16 @@
             [
               {
                 "table": {
-                  "widths": ["10%", "11%", "10%", "15%", "11%", "20%"],
+                  "widths": ["10%", "15%", "11%", "10%", "15%", "11%", "20%"],
                   "body": [
                     [
                       {
                         "text": "{{charge_label}}",
+                        "border": [false, false, false, false],
+                        "style": "receipt-table-value2"
+                      },
+                      {
+                        "text": "{{swatchathatax_label}}",
                         "border": [false, false, false, false],
                         "style": "receipt-table-value2"
                       },
@@ -243,26 +248,16 @@
                         "text": "{{rebate_label}}",
                         "border": [false, false, false, false],
                         "style": "receipt-table-value2"
-                      },
-                      {
-                        "text": "{{adhoc_penalty_label}}",
-                        "border": [false, false, false, false],
-                        "style": "receipt-table-value2"
-                      },
-                      {
-                        "text": "{{adhoc_rebate_label}}",
-                        "border": [false, false, false, false],
-                        "style": "receipt-table-value2"
-                      },
-                      {
-                        "text": "{{adjustment_label}}",
-                        "border": [false, false, false, false],
-                        "style": "receipt-table-value2"
                       }
                     ],
                     [
                       {
                         "text": "{{charge}}",
+                        "border": [false, false, false, false],
+                        "style": "receipt-table2"
+                      },
+                      {
+                        "text": "{{swatchathatax}}",
                         "border": [false, false, false, false],
                         "style": "receipt-table2"
                       },
@@ -277,104 +272,9 @@
                         "style": "receipt-table2"
                       },
                       {
-                        "text": "{{adhoc_penalty}}",
-                        "border": [false, false, false, false],
-                        "style": "receipt-table2"
-                      },
-                      {
-                        "text": "{{adhoc_rebate}}",
-                        "border": [false, false, false, false],
-                        "style": "receipt-table2",
-                        "bold": true
-                      },
-                      {
                         "text": "{{advance_carryforward}}",
                         "border": [false, false, false, false],
                         "style": "receipt-table2"
-                      }
-                    ]
-                  ]
-                }
-              }
-            ],
-            [
-              {
-                "table": {
-                  "widths": ["15%", "15%", "11%", "11%", "11%", "11%", "11%"],
-                  "body": [
-                    [
-                      {
-                        "text": "{{owner_exemption_label}}",
-                        "border": [false, false, false, false],
-                        "style": "receipt-table-value2"
-                      },
-                      {
-                        "text": "{{unit_usage_exemption_label}}",
-                        "border": [false, false, false, false],
-                        "style": "receipt-table-value2"
-                      },
-                      {
-                        "text": "{{fire_cess_label}}",
-                        "border": [false, false, false, false],
-                        "style": "receipt-table-value2"
-                      },
-                      {
-                        "text": "{{cancer_cess_label}}",
-                        "border": [false, false, false, false],
-                        "style": "receipt-table-value2"
-                      },
-                      {
-                        "text": "{{time_interest_label}}",
-                        "border": [false, false, false, false],
-                        "style": "receipt-table-value2"
-                      },
-                      {
-                        "text": "{{decimal_ceiling_debit_label}}",
-                        "border": [false, false, false, false],
-                        "style": "receipt-table-value2"
-                      },
-                      {
-                        "text": "{{decimal_ceiling_credit_label}}",
-                        "border": [false, false, false, false],
-                        "style": "receipt-table-value2"
-                      }
-                    ],
-                    [
-                      {
-                        "text": "{{owner_exemption}}",
-                        "border": [false, false, false, false],
-                        "style": "receipt-table2"
-                      },
-                      {
-                        "text": "{{unit_usage_exemption}}",
-                        "border": [false, false, false, false],
-                        "style": "receipt-table2"
-                      },
-                      {
-                        "text": "{{fire_cess}}",
-                        "border": [false, false, false, false],
-                        "style": "receipt-table2"
-                      },
-                      {
-                        "text": "{{cancer_cess}}",
-                        "border": [false, false, false, false],
-                        "style": "receipt-table2"
-                      },
-                      {
-                        "text": "{{time_interest}}",
-                        "border": [false, false, false, false],
-                        "style": "receipt-table2"
-                      },
-                      {
-                        "text": "{{decimal_ceiling_debit}}",
-                        "border": [false, false, false, false],
-                        "style": "receipt-table2"
-                      },
-                      {
-                        "text": "{{decimal_ceiling_credit}}",
-                        "border": [false, false, false, false],
-                        "style": "receipt-table2",
-                        "bold": true
                       }
                     ]
                   ]
