@@ -34,6 +34,15 @@ public class DcbRefreshController {
         return new ResponseEntity<>(httpHeaders, HttpStatus.FOUND);  
     }
 
+    //this method help to refresh specific tenant only
+    @RequestMapping(value = "/v1/pt/dcb/_refreshSpecificTenant", method = RequestMethod.GET)
+	public ResponseEntity<Object> updateDcbForSpecificTenant(@RequestParam("tenant") String tenant) {
+
+		HttpHeaders httpHeaders = new HttpHeaders();
+		dcbRefreshService.refresh(tenant);
+		return new ResponseEntity<>(httpHeaders, HttpStatus.FOUND);
+	}
+
     @ExceptionHandler(Exception.class)
     public ResponseEntity<Object> handleError(Exception e) {
         log.error("EXCEPTION_WHILE_REFRESHING", e);
