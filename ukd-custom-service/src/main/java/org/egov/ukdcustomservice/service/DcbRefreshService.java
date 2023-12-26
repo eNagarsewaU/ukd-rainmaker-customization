@@ -17,7 +17,9 @@ public class DcbRefreshService {
 	private JdbcTemplate jdbcTemplate; 
 	
 	public static final String tenantsQuery="select distinct tenantid from eg_pt_property where tenantid != 'uk.dehradun'";
-	public static final String deleteQuery="delete from  dcb where propertyid in "+
+	public static final String deleteQuery="delete from  dcb where tenantid=':tenantId'";
+	
+	public static final String deleteQueryOld="delete from  dcb where propertyid in "+
 	" ("
 	+ "select propertyid from eg_pt_property prop,egbs_demand_v1 demand, egbs_demanddetail_v1 dd " +
 	" where demand.id=dd.demandid and demand.consumercode=prop.propertyid and prop.tenantid=':tenantId' and "+
