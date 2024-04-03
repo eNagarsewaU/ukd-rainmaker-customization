@@ -16,7 +16,7 @@
                     "body": [
                         [
    {
-                                "image": "/ukd-assets/Stateimages/vote.jpeg",
+                                "image": "https://nagarsewa.uk.gov.in/ukd-assets/Stateimages/vote.jpeg",
                                 "alignment": "center",
                                 "border": [
                                     true,
