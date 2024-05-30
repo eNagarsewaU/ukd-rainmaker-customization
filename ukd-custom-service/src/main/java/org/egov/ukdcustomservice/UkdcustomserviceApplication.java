@@ -13,6 +13,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Import;
 
 @SpringBootApplication
+@EnableScheduling	
 @Import({ TracerConfiguration.class })
 public class UkdcustomserviceApplication {
 
